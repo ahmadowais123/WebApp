@@ -1,4 +1,4 @@
-package com.owais.model;
+package com.owais.app.service.model;
 
 import javax.persistence.*;
 

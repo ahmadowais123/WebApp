@@ -1,6 +1,6 @@
-package com.owais.dao;
+package com.owais.app.service.dao;
 
-import com.owais.model.Member;
+import com.owais.app.service.model.Member;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
