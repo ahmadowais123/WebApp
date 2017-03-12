@@ -1,4 +1,4 @@
-package com.owais.model;
+package com.owais.app.service.model;
 
 import javax.persistence.*;
 
@@ -15,7 +15,7 @@ public class Member {
     String phoneNo;
     String dateOfBirth;
 
-    private Member() {
+    public Member() {
 
     }
 
@@ -34,6 +34,7 @@ public class Member {
     public String getStudentId() {return this.studentId;}
     public String getPhoneNo() {return this.phoneNo;}
     public String getDateOfBirth() {return this.dateOfBirth;}
+    public Long getId() {return this.id;}
 
     //Setters
     public void setName(String name) {this.name = name;}

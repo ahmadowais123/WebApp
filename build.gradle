@@ -12,7 +12,7 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
 jar {
-    baseName = 'gs-spring-boot'
+    baseName = 'PsaWebApp'
     version =  '0.1.0'
 }
 
@@ -26,7 +26,13 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-test")
+
     compile("com.h2database:h2")
+
     testCompile("junit:junit")
+    testCompile("org.mockito:mockito-core:1.+")
+    testCompile("org.powermock:powermock-module-junit4:1.6.6")
+    testCompile("org.powermock:powermock-api-mockito:1.6.6")
 }
 
