@@ -12,7 +12,7 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
 jar {
-    baseName = 'gs-spring-boot'
+    baseName = 'PsaWebApp'
     version =  '0.1.0'
 }
 
