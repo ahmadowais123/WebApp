@@ -29,6 +29,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-test")
 
     compile("com.h2database:h2")
+    compile("mysql:mysql-connector-java")
 
     testCompile("junit:junit")
     testCompile("org.mockito:mockito-core:1.+")

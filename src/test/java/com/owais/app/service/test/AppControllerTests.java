@@ -38,7 +38,7 @@ public class AppControllerTests {
 
     @Test
     public void createMember() throws  Exception {
-        this.mockMvc.perform(post("/api/create")
+        this.mockMvc.perform(post("/api/member")
                 .param("studentId", "260617913")
                 .param("dateOfBirth", "13-12-1995")
                 .param("phoneNo", "514-663-2088")
@@ -51,7 +51,7 @@ public class AppControllerTests {
 
         given(this.memberRepository.findByStudentId(any(String.class))).willReturn(new Member());
 
-        this.mockMvc.perform(delete("/api/delete?studentId=260617913"))
+        this.mockMvc.perform(delete("/api/member?studentId=260617913"))
                 .andExpect(status().isNoContent());
 
         verify(this.memberRepository).delete(any(Long.class));
@@ -63,7 +63,7 @@ public class AppControllerTests {
     public void deleteMemberNotFound() throws Exception {
         given(this.memberRepository.findByStudentId(any(String.class))).willReturn(null);
 
-        this.mockMvc.perform(delete("/api/delete?studentId=260617913"))
+        this.mockMvc.perform(delete("/api/member?studentId=260617913"))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().string("No student with that Id exists"));
     }

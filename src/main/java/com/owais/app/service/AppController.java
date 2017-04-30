@@ -23,7 +23,7 @@ public class AppController {
     }
 
     //Create a member
-    @RequestMapping(method = RequestMethod.POST, value = "/create")
+    @RequestMapping(method = RequestMethod.POST, value = "/member")
     public ResponseEntity createMember(
             @RequestParam("name") String name,
             @RequestParam("studentId") String studentId,
@@ -52,8 +52,10 @@ public class AppController {
     }
 
     //Delete a member
-    @RequestMapping(method = RequestMethod.DELETE, value="/delete")
-    public ResponseEntity deleteMember(String studentId) {
+    @RequestMapping(method = RequestMethod.DELETE, value="/member")
+    public ResponseEntity deleteMember(
+            @RequestParam("studentId") String studentId
+    ) {
 
         Member member = memberRepository.findByStudentId(studentId);
 
